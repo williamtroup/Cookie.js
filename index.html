@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Cookie.js - v0.1.0</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <script src="src/cookie.js"></script>
+    </head>
+    
+    <body>
+        <button onclick="writer();">Write</button>
+        <button onclick="read();">Read</button>
+        <button onclick="exists();">Exists</button>
+        <button onclick="remove();">Remove</button>
+        <button onclick="enabled();">Enabled</button>
+    </body>
+
+    <script>
+        var cookieInstance = new cookieJs();
+
+        function writer() {
+            cookieInstance.write( "TestCookie", "My Value" );
+        }
+
+        function read() {
+            alert( cookieInstance.read( "TestCookie" ) );
+        }
+
+        function exists() {
+            alert( cookieInstance.exists( "TestCookie" ) );
+        }
+
+        function remove() {
+            cookieInstance.remove( "TestCookie" );
+        }
+
+        function enabled() {
+            alert( cookieInstance.enabled() );
+        }
+    </script>
+</html>
