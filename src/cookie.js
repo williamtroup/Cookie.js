@@ -10,6 +10,8 @@
  * cookieJs().
  * 
  * The main Cookie.js class.
+ * 
+ * @class
  */
 function cookieJs() {
     var _navigator = navigator,
